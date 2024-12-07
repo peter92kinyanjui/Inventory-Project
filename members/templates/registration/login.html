@@ -1,0 +1,29 @@
+<!-- accounts/templates/accounts/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Login</h2>
+        <form action="{% url 'members:login' %}" method="POST">
+            {% csrf_token %}
+            <div class="mb-3 form-check">
+                <label class="form-label">username</label>
+                <input name="username" type="text" class="form-control"  required>
+              </div>
+
+              <div class="mb-3 form-check">
+                <label class="form-label">Password</label>
+                <input name="password" type="password" class="form-control"  required>
+              </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+
+
+ <div class="container paragraph1">
+    <a href="/view_assets/" class="btn btn-secondary mt-3 mb-3" tabindex="-1" role="button" aria-disabled="true">Back</a>
+
+    <p>Update Asset/Equipment</p>
+     <div class="col-md-6">
+         <form action=""  method="POST" enctype="multipart/form-data">
+
+             {% csrf_token %}
+
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Asset Name</label>
+             <input name="asset_name" type="text" value="{{ asset.asset_name }}" class="form-control" required/> <br/>
+            </div>
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Unit Cost</label>
+            <input name="unit_cost" type="number" value="{{ asset.unit_cost }}"  class="form-control" required/> <br/>
+        </div>
+
+            <div class="mb-3 form-check">
+                <label class="form-label">Inventory value</label>
+            <input name="inv_value" type="number" value="{{ asset.inv_value }}"  class="form-control" required/> <br/>
+        </div>
+
+            <div class="mb-3 form-check">
+                <label class="form-label">Department</label>
+            <input name="department" type="text" value="{{ asset.department }}"  class="form-control" required/> <br/>
+        </div>
+
+            <div class="mb-3 form-check">
+                <label class="form-label">Quantity in Stock</label>
+            <input name="asset_qty" type="number" value="{{ asset.asset_qty }}"  class="form-control" required/> <br/>
+            </div>
+            
+            <div class="mb-3 form-check">
+            <label class="form-label">Description</label>
+             <textarea name ="asset_specs"  class="form-control" required>
+                 {{ asset.asset_specs }}
+             </textarea> <br/>
+            </div>
+
+           
+             <!-- <div class="mb-3 form-check">
+                <label class="form-label">Image</label>
+            <input name="asset_img" type="file"  class="form-control"/> <br/>
+             </div> -->
+
+            <input type="submit" value="Save" class="btn btn-success">
+        </form>
+
+     </div>
+ </div>
+{% endblock %}

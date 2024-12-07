@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="container paragraph1">
+    
+        <a href="/view_requests/" class="btn btn-secondary mt-5" tabindex="-1" role="button" aria-disabled="true">Back</a>
+    
+        <p>Request Details</p>
+        <table class="table table-bordered table-striped">
+            <tr>
+            <th>Staff ID</th>
+            <th>First Name</th>
+            <th>Second Name</th>
+            <th>Asset Name</th>
+            <th>Department</th>
+            <th>No: Requested</th>
+            <th>Asset Desc</th>
+            <th>Allocation</th>
+            </tr>
+
+            <tr>
+            <td>{{ request_detail.staff_no }}</td>
+            <td>{{ request_detail.staff_fname }}</td>
+            <td>{{ request_detail.staff_sname }}</td>
+            <td>{{ request_detail.asset_name }}</td>
+            <td>{{ request_detail.department }}</td>
+            <td>{{ request_detail.asset_qty }}</td>
+            <td>{{ request_detail.asset_specs }}</td>
+            <td>{{ request_detail.allocation_status }}</td>
+                 
+                </tr>
+        </table>
+
+</div>
+
+
+{% endblock %}

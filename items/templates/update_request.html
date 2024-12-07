@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+
+
+ <div class="container paragraph1">
+    <a href="/view_requests/" class="btn btn-secondary mt-3 mb-3" tabindex="-1" role="button" aria-disabled="true">Back</a>
+
+    <p>Update request details</p>
+     <div class="col-md-6">
+         <form action=""  method="POST" enctype="multipart/form-data">
+
+             {% csrf_token %}             
+
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Staff ID</label>
+             <input name="staff_no" type="text" value="{{ request_asset.staff_no  }}" class="form-control" required/> <br/>
+            </div>
+
+            <div class="mb-3 form-check">
+                <label class="form-label">First Name</label>
+             <input name="staff_fname" type="text" value="{{ request_asset.staff_fname  }}" class="form-control" required/> <br/>
+            </div>
+
+            <div class="mb-3 form-check">
+                <label class="form-label">Second Name</label>
+             <input name="staff_sname" type="text" value="{{ request_asset.staff_sname  }}" class="form-control" required/> <br/>
+            </div>
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Asset Name</label>
+            <input name="asset_name" type="text" value="{{ request_asset.asset_name }}"  class="form-control" required/> <br/>
+        </div>
+
+                <div class="mb-3 form-check">
+                <label class="form-label">Department</label><br>
+            <input name="department" type="text" value="{{ request_asset.department }}"  class="form-control" required/> <br/>
+        </div>
+
+           <div class="mb-3 form-check">
+                <label class="form-label">Units Requested</label>
+            <input name="asset_qty" type="number" value="{{ request_asset.asset_qty }}"  class="form-control" required/> <br/>
+            </div>
+            
+            <div class="mb-3 form-check">
+            <label class="form-label">Request Details</label>
+             <textarea name ="asset_specs"  class="form-control" required>
+                 {{request_asset.asset_specs }}
+             </textarea> <br/>
+            </div>
+
+            <div class="mb-3 form-check">
+                <label class="form-label">Allocation</label>
+            <input name="allocation_status" type="text" value="{{ request_asset.allocation_status }}"  class="form-control" required/> <br/>
+            </div>
+
+            <input type="submit" value="Save" class="btn btn-success">
+        </form>
+
+     </div>
+ </div>
+{% endblock %}

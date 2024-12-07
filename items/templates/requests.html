@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="container mt-5 mb-5 paragraph1">
+     <div class="col-md-6">
+
+      <a href="/view_requests/" class="btn btn-secondary mt-3 mb-3" tabindex="-1" role="button">Back</a>
+    
+        
+
+      <fieldset>
+         <form action="/request_insert/"  method="POST" enctype="multipart/form-data">
+
+             {% csrf_token %}
+
+
+             <div class="mb-3 form-check">
+                <label class="form-label">First name</label>
+                <input name="staff_fname" type="text" class="form-control"  required>
+              </div>
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Second name</label>
+                <input name="staff_sname" type="text" class="form-control"  required>
+              </div>
+
+              <div class="mb-3 form-check">
+                <label class="form-label">Staff No:</label>
+                <input name="staff_no" type="text" class="form-control"  required>
+              </div>
+
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Asset name</label>
+                <input name="asset_name" type="text" class="form-control"  required>
+              </div>
+
+              <div class="mb-3 form-check">
+                    <label class="form-label">Allocation</label><br>  
+{#                    <select name="allocation_status" id="allocation_status" required>#}
+{#                        <option value="Yes">Yes</option>#}
+{#                        <option value="No">No</option>#}
+{#                    </select>#}
+
+                   <select name="allocation_status" id="allocation_status" required>
+                        <option value="">-Select-</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                   </select>
+              </div>
+
+              <div class="mb-3 form-check">
+                <label class="form-label">Department</label><br>
+                <select name="department" id="department" required>
+                    <option value="">-Select-</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="ICT">ICT</option>
+                    <option value="Administration">Administration</option>
+                    <option value="HR">HR</option>
+                </select> 
+                
+              </div>
+
+
+
+
+            <div class="mb-3 form-check">
+               <label class="form-label">No: of units Requested</label>
+                <input name="asset_qty" type="number" class="form-control"  required>
+              </div>
+
+              <div class="mb-3 form-check">
+                <label class="form-label">Asset Specifications</label>
+                <textarea name ="asset_specs" placeholder="Description" class="form-control" required></textarea>
+               </div>
+
+              <button type="submit" value="Save"  class="btn btn-success">Submit</button>
+        </form>
+      </fieldset>
+
+     </div>
+ </div>
+
+
+
+
+ {% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="container paragraph1">
+    
+        <a href="/view_assets/" class="btn btn-secondary mt-5" tabindex="-1" role="button" aria-disabled="true">Back</a>
+    
+        <p>Asset Details</p>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>Inventory Value</th>
+                <th>Department</th>
+                <th>Qty in Stock</th>
+                <th>Description</th>
+               
+            </tr>
+
+            <tr>
+                <td>{{ asset.asset_name }}</td>
+                <td>{{ asset.unit_cost }}</td>
+                <td>{{ asset.inv_value}}</td>
+                <td>{{ asset.department }}</td>
+                <td>{{ asset.asset_qty }}</td>
+                <td>{{ asset.asset_specs }}</td>
+                
+                </tr>
+        </table>
+
+</div>
+
+
+{% endblock %}

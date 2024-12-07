@@ -1,0 +1,47 @@
+<!-- accounts/templates/accounts/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Registeration Form</h2>
+        <form action="/insert_users/" method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3 form-check">
+                <label class="form-label">First name</label>
+                <input name="staff_fname" type="text" class="form-control"  required>
+              </div>
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Second name</label>
+                <input name="staff_sname" type="text" class="form-control"  required>
+              </div>
+
+              <div class="mb-3 form-check">
+                <label class="form-label">Staff No:</label>
+                <input name="staff_no" type="text" class="form-control"  required>
+              </div>
+
+              <div class="mb-3 form-check">
+                <label class="form-label">Staff Email:</label>
+                <input name="staff_email" type="email" class="form-control"  required>
+              </div>
+
+
+             <div class="mb-3 form-check">
+                <label class="form-label">Password</label>
+                <input name="password" type="text" class="form-control"  required>
+              </div>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</body>
+</html>
