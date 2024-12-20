@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+        <a href="/" class="btn btn-secondary mt-3 mb-3" tabindex="-1" role="button">Home</a>
         <h2 class="mt-5">Login</h2>
         <form action="{% url 'members:login' %}" method="POST">
             {% csrf_token %}

@@ -2,14 +2,19 @@
 {% load static %}
 
 {% block body %}
+
+
+ 
    
 <!-- Masthead-->
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
-        <img class="masthead-avatar mb-5" src="static/images/header.jpg" alt="..." />
+       
+        
         <!-- Masthead Heading-->
         <h1 class="masthead-heading text-uppercase mb-0">PKMInvest Inventory</h1>
+        
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -17,9 +22,27 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">PKMInvest technologies</p>
+        <!-- <p class="masthead-subheading font-weight-light mb-0">PKMInvest technologies</p> -->
+        <!-- <img class="masthead-avatar mb-5 image" src= "{% static 'images/invent.jpg' %}"  alt="header image" /> -->
     </div>
 </header>
+<!-- Content section 1-->
+<section id="scroll">
+    <div class="container px-5 mt-5">
+        <div class="row gx-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="p-5"><img class="img-fluid rounded-circle" src="{% static 'images/PKMlogo.PNG' %}" alt="logo" /></div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <h2 class="display-4">PKMInvest Inventory system</h2>
+                    <p>Welcome to online Invenory Managemnet System. This platform helps you register new, update and even cancel requests.
+                        You are also able to update asset/Equipment list as needed. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
         

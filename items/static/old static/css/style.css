@@ -1,0 +1,72 @@
+.btn-space {
+    margin-right: 5px;
+}
+
+input{
+    width: 100%;
+  }
+
+.paragraph{
+    margin-top: 10px;
+    color: whitesmoke;
+    background-color: cadetblue;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    font-family: "Bodoni MT";
+    text-align: center;
+}
+.h2{
+    margin: 50px;
+    color: crimson;
+    font-stretch: condensed;
+    font-family: "Arial Narrow";
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.header{
+    padding: 30px;
+    font-family: "Bodoni MT";
+    font-weight: bold;
+    font-size: 25px;
+    backface-visibility: visible;
+    background-color: whitesmoke;
+}
+
+.paragraph1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: brown;
+    background-color: lightgray;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: "Bodoni MT";
+    border: cadetblue solid;
+   align-self: center;
+    /* text-align: center; */
+    
+}
+.footer{
+    margin: 10px;
+    color:darkcyan;
+    font-stretch: condensed;
+    font-family: "Arial Narrow";
+    font-size: 15px;
+    text-align: center;
+}
+.image{
+    margin-top: 20px;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+}
+.h5{
+    padding: 40px;
+    background-color: blanchedalmond;
+    border-bottom: cadetblue solid;
+    text-align: center;
+}

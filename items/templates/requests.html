@@ -7,7 +7,7 @@
 <div class="container mt-5 mb-5 paragraph1">
      <div class="col-md-6">
 
-      <a href="/view_requests/" class="btn btn-secondary mt-3 mb-3" tabindex="-1" role="button">Back</a>
+      <a href="/view_requests/" class="btn btn-secondary mt-5 mb-3" tabindex="-1" role="button">Back</a>
     
         
 
@@ -34,17 +34,21 @@
 
 
              <div class="mb-3 form-check">
-                <label class="form-label">Asset name</label>
-                <input name="asset_name" type="text" class="form-control"  required>
+                <label class="form-label">Asset</label><br>
+                <select name="asset_name" id="asset_name" required>
+                    <option value="">-Select-</option>
+                    <option value="Boardroom Table">Boardroom Table</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Printer">Printer</option>
+                    <option value="Office Chair">Office Chair</option>
+                    <option value="Stationery">Stationery</option>
+                </select>
+              </div>
               </div>
 
               <div class="mb-3 form-check">
-                    <label class="form-label">Allocation</label><br>  
-{#                    <select name="allocation_status" id="allocation_status" required>#}
-{#                        <option value="Yes">Yes</option>#}
-{#                        <option value="No">No</option>#}
-{#                    </select>#}
-
+                    <label class="form-label">Allocation</label><br>
                    <select name="allocation_status" id="allocation_status" required>
                         <option value="">-Select-</option>
                         <option value="Yes">Yes</option>

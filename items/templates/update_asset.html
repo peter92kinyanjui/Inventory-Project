@@ -5,8 +5,8 @@
 
 
 
- <div class="container paragraph1">
-    <a href="/view_assets/" class="btn btn-secondary mt-3 mb-3" tabindex="-1" role="button" aria-disabled="true">Back</a>
+ <div class="container paragraph1 mt-5">
+    <a href="/view_assets/" class="btn btn-secondary mt-5 mb-3" tabindex="-1" role="button" aria-disabled="true">Back</a>
 
     <p>Update Asset/Equipment</p>
      <div class="col-md-6">
@@ -39,6 +39,25 @@
                 <label class="form-label">Quantity in Stock</label>
             <input name="asset_qty" type="number" value="{{ asset.asset_qty }}"  class="form-control" required/> <br/>
             </div>
+
+               <div class="mb-3 form-check">
+                    <label class="form-label">Allocation</label><br>
+                   <select name="allocation_status" id="allocation_status" required>
+                        <option value="">-Select-</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                   </select>
+              </div>
+
+{#              <div class="mb-3 form-check">#}
+{#                <label class="form-label">Assigned Staff</label>#}
+{#            <input name="department" type="text" value="{{ asset.staff }}"  class="form-control" required/> <br/>#}
+{#        </div>#}
+{##}
+{#            <div class="mb-3 form-check">#}
+{#                <label class="form-label">Staff_no</label>#}
+{#            <input name="asset_qty" type="text" value="{{ asset.staff_no }}"  class="form-control" required/> <br/>#}
+{#            </div>#}
             
             <div class="mb-3 form-check">
             <label class="form-label">Description</label>
@@ -53,7 +72,7 @@
             <input name="asset_img" type="file"  class="form-control"/> <br/>
              </div> -->
 
-            <input type="submit" value="Save" class="btn btn-success">
+            <input type="submit" value="Save" class="btn btn-success mb-3">
         </form>
 
      </div>

@@ -14,6 +14,9 @@ class Asset(models.Model):
     department = models.CharField(max_length=50)
     # asset_img = models.ImageField(upload_to='Product/')
     asset_qty = models.IntegerField()
+    allocation_status = models.CharField(max_length=100)
+    # staff_no = models.CharField(max_length=50)
+    # Staff = models.CharField(max_length=50)
 
 
 class Request(models.Model):

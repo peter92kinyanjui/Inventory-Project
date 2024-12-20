@@ -71,7 +71,9 @@ def insert_data(request):
         department = request.POST['department']
         asset_qty = request.POST['asset_qty']
         asset_specs = request.POST['asset_specs']
-        # asset_img = request.FILES['asset_img']
+        allocation_status = request.POST['allocation_status']
+        # staff = request.POST['staff']
+        # staff_no = request.POST['staff_no']
 
         asset = Asset(
                           asset_name=asset_name,
@@ -80,7 +82,9 @@ def insert_data(request):
                           department=department,
                           asset_qty=asset_qty,
                           asset_specs=asset_specs,
-                        #   asset_img=asset_img
+                          allocation_status=allocation_status,
+                          # staff=staff,
+                          # staff_no=staff_no,
         )
         asset.save()
 
@@ -112,8 +116,11 @@ def update_asset(request,id):
         inv_value = request.POST['inv_value']
         department = request.POST['department']
         asset_qty = request.POST['asset_qty']
+        allocation_status = request.POST['allocation_status']
+        # staff = request.POST['staff']
+        # staff_no = request.POST['staff_no']
         asset_specs = request.POST['asset_specs']
-        # asset_img = request.FILES['asset_img']
+
 
         #Reassigning the new values
         asset.asset_name = asset_name
@@ -121,8 +128,13 @@ def update_asset(request,id):
         asset.inv_value = inv_value
         asset.department = department
         asset.asset_qty = asset_qty
+        asset.allocation_status = allocation_status
+        # asset.staff = staff
+        # asset.staff_no = staff_no
         asset.asset_specs = asset_specs
-        # asset.asset_img = asset_img
+
+
+
 
         asset.save()
         return redirect('/view_assets/')
